@@ -1,0 +1,67 @@
+:Root {
+
+    --Crimson-Color : #bc3a2a;
+    --White-Color : white;
+
+} #Vuelo {
+
+    position : relative;
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    width : 100%;
+    height : 100vh;
+
+} .Contenido-V {
+
+    position : relative;
+    z-index : 2;
+    width : 100%;
+    max-width : 1200px;
+    margin : 0 auto;
+    padding : 0 6%;
+
+} .Etiqueta-V {
+
+
+    font-weight : bold;
+    display : flex;
+    text-align : center;
+    gap : 10px;
+    font-size : 20px;
+    color : var(--White-Color);
+    margin-bottom : 14px;
+    margin-left : 35%;
+
+} .Etiqueta-V::before {
+
+    content : '';
+    margin-top : 10px;
+    width : 30px;
+    height : 2px;
+    background : var(--Crimson-Color);
+
+} .Titulo-V {
+
+    font-weight : bold;
+    position : relative;
+    font-size : 90px;
+    text-align : center;
+    color : var(--White-Color);
+
+} .Parrafo-V {
+
+    margin-top : 20px;
+    font-weight : bold;
+    text-align : justify;
+    max-width : 1000px;
+    font-size : 20px;
+    color : var(--White-Color);
+
+} #Cards-V {
+
+    position : relative;
+    width : 100%;
+    height : 100vh;
+
+} 

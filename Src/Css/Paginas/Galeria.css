@@ -1,0 +1,112 @@
+#Galeria {
+
+    padding : 120px 0;
+    position : relative;
+    overflow : hidden;
+    z-index : 2;
+
+} .Galeria {
+
+    margin-top : 3%;
+    position : relative;
+    z-index : 1;
+    columns : 4 260px;
+    column-gap : 14px;
+
+} .Item {
+
+    break-inside : avoid;
+    margin-bottom : 14px;
+
+} .Item img {
+
+    height : 200px;
+    border : 2px solid white;
+    display : block;
+    width : 100%;
+    border-radius : 3px;
+
+} .Wrap {
+
+    max-width : 1180px;
+    margin : 0 auto;
+    padding : 0 20px;
+
+} .Encabezado {
+
+    max-width : 1000px;
+    margin : 0 auto;
+    padding : 0 20px;
+
+} .Etiqueta {
+
+    display : flex;
+    position : relative;
+    z-index : 2;
+    align-items : center;
+    gap : 9px;
+    font-size : 1px;
+    color : white;
+    margin-bottom : 14px;
+    font-weight : 600;
+
+} .Encabezado .Etiqueta {
+
+    justify-content : center;
+
+} .Titulo {
+
+    text-align : center;
+    position : relative;
+    z-index : 2;
+    font-size : clamp(32px, 4.2vw, 50px);
+    color : white;
+
+} .Texto {
+
+    position : relative;
+    z-index : 2;
+    width : 100%;
+    margin-left : 1%;
+    margin-right : 1%;
+    text-align : justify;
+    color : white;
+    font-size : 17px;
+        
+} @Media ( max-width : 760px ) {
+
+    #Galeria {
+
+        padding : 60px 0;
+        padding-left : 80px;
+
+    } .Wrap .Encabezado {
+
+        padding : 0 14px;
+
+    } .Galeria {
+
+        columns : 2 140px;
+        column-gap : 10px;
+
+    } .Item {
+
+        margin-bottom : 10px;
+
+    } .Etiqueta {
+
+        font-size : 5px;
+
+    } .Titulo {
+
+        font-size : 32px;
+        word-break : break-word;
+
+    } .Texto {
+
+        text-align : justify;
+        font-size : 15px;
+
+    }
+
+}

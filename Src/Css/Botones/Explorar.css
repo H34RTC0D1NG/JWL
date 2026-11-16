@@ -1,0 +1,23 @@
+.Rojo {
+
+    padding : 12px;
+    border : 2px solid white;
+    border-radius : 3px;
+    background : red;
+    color : white;
+    box-shadow : 0 10px 30px rgba(188, 58, 42, .4);
+
+} .Rojo:hover {
+
+    background : #8f2a1e;
+    border : 2px solid grey;
+    transition : 1s;
+
+} .Rojo a {
+
+    white-space : nowrap;
+    font-size : 15px;
+    text-decoration : none;
+    color : white;
+
+}

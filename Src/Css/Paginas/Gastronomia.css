@@ -1,0 +1,95 @@
+#Gastronomia {
+
+    background : url('../../../Public/Imagenes/Fondo_39.png');
+    background-position : center;
+    background-repeat : no-repeat;
+    background-size : cover;
+    padding : 120px 0;
+    min-height : 200vh;
+    position : relative;
+    overflow : hidden;
+    z-index : 2;
+
+} .Encabezado {
+
+    max-width : 100%;
+    margin : 0 auto 56px;
+    text-align : center;
+
+} .Etiqueta {
+
+    display : flex;
+    align-items : center;
+    font-size : 15px;
+    margin-bottom : -5px;
+
+} .Etiqueta .Icono {
+
+    color : white;
+    font-size : 20px;
+
+} .Encabezado .Etiqueta {
+
+    color : white;
+    justify-content : center;
+
+} .Tt {
+
+    position : relative;
+    color : white;
+    margin-top : 7px;
+    font-size : 100px;
+
+} .Parrafo {
+
+    position : relative;
+    font-weight : 100;
+    color : white;
+    text-align : justify;
+    margin : 2.5%;
+    font-size : 20px;
+
+} @Media ( max-width : 900px ) {
+
+    .Etiqueta {
+
+        margin-left : 15%;
+        font-size : 11px;
+
+    } #Gastronomia {
+
+        padding : 80px 0;
+
+    } .Tt {
+
+        font-size : 50px;
+        margin : 5% 5% 0;
+
+    } .Parrafo {
+
+        font-size : 16px;
+        margin : 5%;
+        text-align : justify;
+
+    }
+
+} @Media ( max-width : 600px ) {
+
+    .Etiqueta {
+
+        margin-left : 15%;
+        font-size : 11px;
+
+    } .Tt {
+
+        margin-left : 25%;
+        font-size : 35px;
+
+    } .Parrafo {
+
+        font-size : 12px;
+        margin-left : 28%;
+
+    }
+
+}

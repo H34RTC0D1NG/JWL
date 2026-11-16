@@ -1,0 +1,36 @@
+.Separador {
+
+    position : relative;
+    height : 0;
+    z-index : 5;
+    pointer-events : none;
+
+} .Separador::before {
+
+    content : '';
+    position : absolute;
+    left : 0;
+    right : 0;
+    top : -70px;
+    height : 140px;
+    background : linear-gradient(
+        to bottom, transparent,
+        rgba(10, 10, 16, .85)
+        50%, transparent
+    );
+
+} .Separador::after {
+
+    content : '';
+    position : absolute;
+    left : 10%;
+    right : 10%;
+    top : 0;
+    height : 1px;
+    background : linear-gradient(
+        to right, transparent,
+        rgba(247, 243, 234, .6),
+        transparent
+    );
+
+}

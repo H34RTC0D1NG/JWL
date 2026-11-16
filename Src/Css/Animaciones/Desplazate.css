@@ -1,0 +1,50 @@
+.Desplazate {
+
+    position : absolute;
+    z-index : 2;
+    right : 28px;
+    bottom : 28px;
+    display : flex;
+    writing-mode : vertical-rl;
+    font-size : 12px;
+    letter-spacing : .14em;
+    text-transform : uppercase;
+    color : rgba(247, 243, 234, .72);
+    align-items : center;
+    gap : 10px;
+
+} .Desplazate::after {
+
+    content : '';
+    display : block;
+    width : 1px;
+    height : 46px;
+    background : #f7f3ea;
+    transform-origin : top;
+    animation : Thread 2s ease-in-out infinite;
+
+} @keyframes Thread {
+    
+    0% {
+
+        transform : scaleY(0);
+        transform-origin : top;
+
+    } 50% {
+
+        transform : scaleY(1);
+        transform-origin : top;
+
+    } 50.1% {
+
+        transform : scaleY(1);
+        transform-origin : bottom;
+
+    } 100% {
+
+        transform : scaleY(0);
+        transform-origin : bottom;
+
+    }
+
+}

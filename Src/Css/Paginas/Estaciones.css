@@ -1,0 +1,139 @@
+#Estacion {
+
+    position : relative;
+    overflow : hidden;
+    margin : 0;
+    width : 100%;
+    height : 100vh;
+
+} #Estacion .Wrap {
+
+    position : relative;
+    z-index : 1;
+    max-width : 1180px;
+    height : 100%;
+    margin : 0 auto;
+    padding : 40px 28px 40px calc(88px + 28px);
+
+} #Estacion .Wrap.Inverso {
+
+    display : grid;
+    grid-template-columns : 1fr 1fr;
+    gap : 72px;
+    align-items : center;
+
+} #Estacion .Titulo {
+
+    font-weight : 600;
+    font-size : clamp(32px, 4.2vw, 50px);
+    text-align : left;
+    line-height : 1.06;
+    color : white;
+    margin : 0;
+
+
+} #Estacion .Texto p {
+
+    text-align : justify;
+    color : white;
+    font-size : 16.5px;
+        
+} #Estacion .Titulo + p {
+
+    margin-top : 20px;
+
+} #Estacion .Chips {
+
+    display : grid;
+    grid-template-columns : repeat(4, 1fr);
+    gap : 12px;
+    margin-top : 28px;
+
+} #Estacion .Chip {
+
+    border : 2px solid white;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    text-align : center;
+    padding : 16px 8px;
+    background : black;
+    border-radius : 4px;
+    box-shadow : 0 6px 20px rgba(27, 23, 32, .07);
+
+} #Estacion .Emoji {
+
+    font-size : 28px;
+    line-height : 1.2;
+
+} #Estacion .Chip strong {
+
+    color : white;
+    margin-top : 12px;
+    font-size : 14px;
+
+} #Estacion .Chip small {
+
+    font-size : 12px;
+    color : grey;
+
+} #Estacion .Media {
+
+    position : relative;
+    margin-bottom : 18px;
+
+} #Estacion .Media img {
+
+    border : 2px solid white;
+    width : 100%;
+    height : 560px;
+    object-fit : cover;
+    border-radius : 2px;
+
+} #Estacion .Etiqueta-Marco {
+
+    border : 2px solid white;
+    position : absolute;
+    bottom : -18px;
+    right : -8px;
+    padding : 10px 18px;
+    background : #1b1720;
+    color : white;
+    font-size : 12px;
+    letter-spacing : .03em;
+    border-radius : 4px;
+
+} @Media ( max-width : 980px ) {
+
+    #Estacion .Wrap.Inverso {
+
+        grid-template-columns : 1fr;
+        gap : 32px;
+
+    } #Estacion .Titulo {
+
+        margin-top : 7%;
+
+    } #Estacion .Media img {
+
+        height : 380px;
+
+    }
+
+} @Media ( max-width : 720px ) {
+
+    #Estacion {
+
+        padding : 0;
+
+    } #Estacion .Wrap {
+
+        padding : 40px 16px 40px calc(88px + 16px);
+
+    } #Estacion .Chips {
+
+        grid-template-columns : repeat(2, 1fr);
+
+    }
+ 
+}

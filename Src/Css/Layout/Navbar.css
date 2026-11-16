@@ -1,0 +1,276 @@
+:Root {
+
+    --Body-Color : #e4e9f7;
+    --Sidebar-Color : #fff;
+    --Primary-Color : #695cfe;
+    --Primary-Color-Light : #f6f5ff;
+    --Toggle-Color : #ddd;
+    --Text-Color : #707070;
+
+    --Tran-03: all .2s ease;
+    --Tran-04: all .3s ease;
+    --Tran-05: all .4s ease;
+    --Tran-06: all .5s ease;
+
+    --Body-Color-2 : #18191a;
+    --Sidebar-Color-2 : #242526;
+    --Secondary-Color : #313b3c;
+    --Secondary-Color-Light : #3a3b3c;
+    --Toggle-Color-2 : #fff;
+    --Text-Color-2 : #ccc;
+
+} body.Dark {
+
+    --Body-Color : var(--Body-Color-2);
+    --Sidebar-Color : var(--Sidebar-Color-2);
+    --Primary-Color : var(--Secondary-Color-Light);
+    --Primary-Color-Light : var(--Secondary-Color-Light);
+    --Toggle-Color : var(--Toggle-Color-2);
+    --Text-Color : var(--Text-Color-2); 
+
+} body {
+
+    min-height : 100vh;
+    background : var(--Body-Color);
+    transition : var(--Tran-05);
+
+} .Sidebar {
+
+    position : fixed;
+    top : 0;
+    left : 0;
+    width : 250px;
+    height : 100%;
+    padding : 10px 14px;
+    background : var(--Sidebar-Color);
+    transition : var(--Tran-05);
+    z-index : 100;
+
+} .Sidebar .Header {
+
+    position : relative;
+
+} .Sidebar .Header .Img-Text {
+
+    display : flex;
+    align-items : center;
+
+} .Sidebar .Text {
+
+    white-space : nowrap;
+    opacity : 1;
+    transition : var(--Tran-03);
+    font-size : 16px;
+    font-weight : 500;
+    color : var(--Text-Color);
+
+} .Sidebar.Close .Text {
+
+    opacity : 0;
+
+} .Sidebar .Image {
+
+    min-width : 60px;
+    display : flex;
+    align-items : center;
+
+} .Header .Img-Text .Header-Text {
+
+    display : flex;
+    flex-direction : column;
+
+} .Header-Text .Name {
+
+    letter-spacing : 2px;
+    font-weight : 600;
+
+} .Header-Text .City {
+
+    margin-top : -2px;
+
+} .Sidebar .Header .Toggle {
+
+    position : absolute;
+    top : 50%;
+    right : -25px;
+    transform : translateY(-50%) rotate(180deg);
+    cursor : pointer;
+    transition : all 1.3s ease;
+    width : 30px;
+    height : 30px;
+    background : var(--Primary-Color);
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    border-radius : 50%;
+    color : var(--Sidebar-Color);
+    font-size : 2px;
+
+} .Sidebar.Close .Header .Toggle {
+
+    transform : translateY(-50%) rotate(0deg);
+    transition : 1.3s;
+
+} .Sidebar .Header .Toggle .Svg {
+
+    font-size : 20px;
+
+} .Sidebar .Nav-Link {
+
+    height : 50px;
+    margin-top : 10px;
+    list-style : none;
+    display : flex;
+    align-items : center;
+
+} .Sidebar .Nav-Link .Icon {
+
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    font-size : 20px;
+    min-width : 60px;
+
+} .Sidebar .Nav-Link .Icon, .Sidebar .Nav-Link .Text {
+
+    color : var(--Text-Color);
+    transition : var(--Tran-03);
+
+} .Sidebar .Nav-Link .Link-A {
+
+    height : 100%;
+    width : 100%;
+    border-radius : 4px;
+    display : flex;
+    align-items : center;
+    text-decoration : none;
+    transition : var(--Tran-04);
+
+} .Sidebar .Nav-Link .Link-A:hover {
+
+    background : var(--Primary-Color);
+
+} .Sidebar .Nav-Link .Link-A:hover .Icon, .Sidebar .Nav-Link .Link-A:hover .Text {
+
+    color : var(--Sidebar-Color);
+
+} .Sidebar .Menu-Bar {
+
+    height : calc(100% - 50px);
+    display : flex;
+    flex-direction : column;
+    justify-content : space-between;
+
+} .Menu-Bar .Mode {
+
+    position : relative;
+    background : var(--Primary-Color-Light);
+    border-radius : 4px;
+    transition : var(--Tran-05);
+
+} .Menu-Bar .Mode .Icon {
+
+    position : absolute;
+
+} .Menu-Bar .Mode .Moon-Sun {
+
+    height : 50px;
+    width : 60px;
+    display : flex;
+    align-items : center;
+
+} .Menu-Bar .Mode li {
+
+    position : absolute;
+
+} .Menu-Bar .Mode .Icon.Sun {
+
+    Opacity : 0;
+
+} .Sidebar.Close {
+
+    width : 88px;
+
+} body.Dark .Sidebar .Header .Toggle {
+
+    color : var(--Text-Color);
+
+} body.Dark .Sidebar .Nav-Link .Link-A:hover .Icon, body.Dark .Sidebar .Nav-Link .Link-A:hover .Text {
+
+    color : var(--Text-Color);
+
+} .Sidebar .Menu-Links, .Sidebar .Bottom-Content {
+
+    padding : 0;
+    margin : 0;
+
+} .Menu-Bar .Mode .Icon {
+
+    transition : var(--Tran-03);
+
+} body.Dark .Menu-Bar .Mode .Icon.Sun {
+
+    opacity : 1;
+
+} body.Dark .Menu-Bar .Mode .Icon.Moon {
+
+    opacity : 0;
+
+} .Menu-Bar .Mode .Toggle-Switch {
+
+    position : absolute;
+    right : 0;
+    height : 100%;
+    min-width : 60px;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    border-radius : 3px;
+    cursor : pointer;
+
+} .Toggle-Switch .Switch {
+
+    position : relative;
+    height : 22px;
+    width : 40px;
+    border-radius : 25px;
+    background : var(--Toggle-Color);
+    transition : var(--Tran-05);
+
+} .Switch::before {
+
+    content : '';
+    position : absolute;
+    height : 15px;
+    width : 15px;
+    border-radius : 50%;
+    top : 50%;
+    left : 5px;
+    transform : translateY(-50%);
+    background : var(--Sidebar-Color);
+    transition : var(--Tran-04);
+        
+} body.Dark .Switch::before {
+
+    left : 20px;
+
+} .Overlay {
+
+    position : fixed;
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+    background : rgba(0, 0, 0, .3);
+    backdrop-filter : blur(20px);
+    opacity : 0;
+    pointer-events : none;
+    transition : var(--Tran-05);
+    z-index : 99;
+
+} .Overlay.Activo {
+
+    opacity : 1;
+    pointer-events : auto;
+
+}
