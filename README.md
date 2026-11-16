@@ -5,7 +5,7 @@ Projecto de Fullstack II - React y Microservicios.
 ```Json
 
 {
-    "Projectoc" : " Japón - JWL ",
+    "Projecto " : " Japón - JWL ",
     "Creador  " : " Isam Mejias ",
     "Contenido" : [
         "React",
