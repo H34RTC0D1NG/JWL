@@ -2,10 +2,9 @@
 
 Projecto de Fullstack II - React y Microservicios.
 
---- Json
+```Json
 
 {
-
     'Projecto'  : ' Japón - JWL ',
     'Creador '  : ' Isam Mejias ',
     'Contenido' : [
@@ -32,9 +31,8 @@ Projecto de Fullstack II - React y Microservicios.
         'Desconexión y Conexión de Usuarios',
         'Registro y Login de Usuarios'
     ]
-
 }
 
----
+```
 
 Cada cosa que agregue la ire implementando ejem ejem [>_<]
