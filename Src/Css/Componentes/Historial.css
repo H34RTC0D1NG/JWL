@@ -1,0 +1,553 @@
+/* ================= HISTORIAL ================= */
+
+.Historial {
+
+    --Barra : 93px; /* ancho de tu barra lateral */
+
+    position : relative;
+    z-index : 1;
+    width : 100%;
+    max-width : calc(1200px + var(--Barra) + 64px);
+    min-height : 100vh;
+    margin : 0 auto;
+    padding : 40px 32px 40px calc(var(--Barra) + 32px);
+    box-sizing : border-box;
+    color : white;
+    font-family : 'Segoe UI', Arial, sans-serif;
+
+} .Historial * {
+
+    font-family : inherit;
+    box-sizing : border-box;
+
+} .Historial h2, .Historial h5, .Historial p, .Historial span {
+
+    margin : 0;
+    visibility : visible;
+    opacity : 1;
+
+}
+
+/* ----- encabezado ----- */
+.Historial-Header {
+
+    display : flex;
+    justify-content : space-between;
+    align-items : flex-end;
+    gap : 20px;
+    flex-wrap : wrap;
+    margin-bottom : 24px;
+
+} .Historial .Historial-Kanji {
+
+    display : block !important;
+    color : #e63946;
+    font-size : 14px;
+    letter-spacing : 6px;
+    margin-bottom : 4px;
+
+} .Historial .Historial-Header h2 {
+
+    display : block !important;
+    color : white !important;
+    font-size : 34px;
+    font-weight : 800;
+    text-shadow : 0 2px 12px rgba(0, 0, 0, .7);
+
+} .Historial .Historial-Sub {
+
+    display : block !important;
+    color : rgba(255, 255, 255, .7) !important;
+    font-size : 14px;
+    margin-top : 4px;
+
+}
+
+/* ----- contadores ----- */
+.Historial-Stats {
+
+    display : flex;
+    gap : 12px;
+
+} .Stat {
+
+    min-width : 100px;
+    padding : 12px 18px;
+    border-radius : 14px;
+    background : rgba(15, 12, 35, .6);
+    border : 1px solid rgba(255, 255, 255, .1);
+    backdrop-filter : blur(14px);
+    -webkit-backdrop-filter : blur(14px);
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+
+} .Stat-Numero {
+
+    font-size : 26px;
+    font-weight : 800;
+    line-height : 1;
+
+} .Stat-Texto {
+
+    font-size : 11px;
+    letter-spacing : 1px;
+    text-transform : uppercase;
+    color : rgba(255, 255, 255, .6);
+    margin-top : 4px;
+
+} .Stat-Pendiente .Stat-Numero {
+
+    color : #f59e0b;
+
+} .Stat-Ok .Stat-Numero {
+
+    color : #34d399;
+
+}
+
+/* ----- filtros ----- */
+.Historial-Filtros {
+
+    display : inline-flex;
+    gap : 4px;
+    padding : 4px;
+    border-radius : 30px;
+    background : rgba(15, 12, 35, .6);
+    border : 1px solid rgba(255, 255, 255, .1);
+    backdrop-filter : blur(14px);
+    -webkit-backdrop-filter : blur(14px);
+    margin-bottom : 24px;
+
+} .Historial-Filtros button {
+
+    border : none;
+    background : transparent;
+    color : rgba(255, 255, 255, .7);
+    padding : 8px 18px;
+    border-radius : 30px;
+    font-size : 13px;
+    font-weight : 600;
+    cursor : pointer;
+    transition : .2s;
+
+} .Historial-Filtros button:hover {
+
+    color : white;
+
+} .Historial-Filtros button.Activo {
+
+    background : #e63946;
+    color : white;
+    box-shadow : 0 4px 14px rgba(230, 57, 70, .4);
+
+}
+
+/* ----- grilla de tarjetas ----- */
+.Historial-Grid {
+
+    display : grid;
+    grid-template-columns : repeat(auto-fill, minmax(340px, 1fr));
+    gap : 20px;
+
+} .Mensaje-Card {
+
+    position : relative;
+    display : flex;
+    flex-direction : column;
+    gap : 14px;
+    padding : 20px;
+    border-radius : 18px;
+    background : rgba(15, 12, 35, .65);
+    border : 1px solid rgba(255, 255, 255, .1);
+    backdrop-filter : blur(16px);
+    -webkit-backdrop-filter : blur(16px);
+    box-shadow : 0 10px 30px rgba(0, 0, 0, .35);
+    overflow : hidden;
+    transition : transform .25s, border-color .25s, box-shadow .25s;
+    animation : Aparecer .4s ease both;
+
+} .Mensaje-Card::before {
+
+    /* barrita de color arriba */
+    content : '';
+    position : absolute;
+    top : 0;
+    left : 0;
+    right : 0;
+    height : 4px;
+    background : var(--Acento);
+
+} .Mensaje-Card:hover {
+
+    transform : translateY(-4px);
+    border-color : var(--Acento);
+    box-shadow : 0 16px 40px rgba(0, 0, 0, .5);
+
+} .Mensaje-Top {
+
+    display : flex;
+    align-items : center;
+    gap : 12px;
+
+} .Mensaje-Avatar {
+
+    width : 46px;
+    height : 46px;
+    flex-shrink : 0;
+    border-radius : 50%;
+    background : var(--Acento);
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    font-weight : 800;
+    font-size : 16px;
+    color : white;
+    box-shadow : 0 0 0 3px rgba(255, 255, 255, .1);
+
+} .Mensaje-Info {
+
+    flex : 1;
+    min-width : 0;
+
+} .Mensaje-Info h5 {
+
+    font-size : 16px;
+    font-weight : 700;
+    white-space : nowrap;
+    overflow : hidden;
+    text-overflow : ellipsis;
+
+} .Mensaje-Info a {
+
+    display : block;
+    font-size : 13px;
+    color : rgba(255, 255, 255, .55);
+    text-decoration : none;
+    white-space : nowrap;
+    overflow : hidden;
+    text-overflow : ellipsis;
+
+} .Mensaje-Info a:hover {
+
+    color : var(--Acento);
+
+} .Mensaje-Estado {
+
+    flex-shrink : 0;
+    font-size : 11px;
+    font-weight : 700;
+    padding : 4px 10px;
+    border-radius : 20px;
+    background : rgba(245, 158, 11, .15);
+    color : #f59e0b;
+
+} .Respondido .Mensaje-Estado {
+
+    background : rgba(52, 211, 153, .15);
+    color : #34d399;
+
+} .Mensaje-Texto {
+
+    font-size : 14px;
+    line-height : 1.6;
+    color : rgba(255, 255, 255, .85);
+    word-break : break-word;
+
+}
+
+.Mensaje-Fecha {
+
+    font-size : 12px;
+    color : rgba(255, 255, 255, .45);
+    margin-top : -6px;
+
+}
+
+/* ----- respuesta guardada ----- */
+.Mensaje-Respuesta {
+
+    padding : 12px 14px;
+    border-radius : 12px;
+    background : rgba(52, 211, 153, .08);
+    border-left : 3px solid #34d399;
+
+} .Mensaje-Respuesta span {
+
+    display : block;
+    font-size : 11px;
+    font-weight : 700;
+    text-transform : uppercase;
+    letter-spacing : 1px;
+    color : #34d399;
+    margin-bottom : 4px;
+
+} .Mensaje-Respuesta p {
+
+    font-size : 13px;
+    line-height : 1.5;
+    color : rgba(255, 255, 255, .8);
+    word-break : break-word;
+
+}
+
+/* ----- botones ----- */
+.Mensaje-Acciones {
+
+    display : flex;
+    gap : 10px;
+    margin-top : auto;
+
+} .Mensaje-Card button {
+
+    border : none;
+    border-radius : 10px;
+    padding : 10px 14px;
+    font-size : 13px;
+    font-weight : 700;
+    cursor : pointer;
+    transition : .2s;
+
+} .Btn-Responder {
+
+    flex : 1;
+    background : var(--Acento);
+    color : white;
+
+} .Btn-Responder:hover {
+
+    filter : brightness(1.15);
+    transform : translateY(-1px);
+
+} .Btn-Eliminar {
+
+    background : rgba(230, 57, 70, .12);
+    color : #ff6b76;
+    border : 1px solid rgba(230, 57, 70, .3) !important;
+
+} .Btn-Eliminar:hover {
+
+    background : #e63946;
+    color : white;
+
+} .Btn-Cancelar {
+
+    background : rgba(255, 255, 255, .08);
+    color : rgba(255, 255, 255, .8);
+
+} .Btn-Cancelar:hover {
+
+    background : rgba(255, 255, 255, .15);
+
+} .Btn-Enviar {
+
+    background : #34d399;
+    color : #0b2a20;
+
+} .Btn-Enviar:hover {
+
+    filter : brightness(1.1);
+
+} .Btn-Enviar:disabled {
+
+    opacity : .6;
+    cursor : wait;
+
+} .Btn-Borrar {
+
+    background : #e63946;
+    color : white;
+
+}
+
+/* ----- formulario de respuesta ----- */
+.Mensaje-Form {
+
+    display : flex;
+    flex-direction : column;
+    gap : 10px;
+    animation : Aparecer .25s ease both;
+
+} .Mensaje-Form textarea {
+
+    width : 100%;
+    resize : vertical;
+    padding : 12px;
+    border-radius : 12px;
+    border : 1px solid rgba(255, 255, 255, .15);
+    background : rgba(0, 0, 0, .3);
+    color : white;
+    font-size : 14px;
+    outline : none;
+    transition : border-color .2s;
+
+} .Mensaje-Form textarea:focus {
+
+    border-color : var(--Acento);
+
+} .Mensaje-Form-Botones {
+
+    display : flex;
+    justify-content : flex-end;
+    gap : 8px;
+
+}
+
+/* ----- confirmar eliminar ----- */
+.Mensaje-Confirmar {
+
+    display : flex;
+    align-items : center;
+    justify-content : space-between;
+    gap : 10px;
+    flex-wrap : wrap;
+    padding : 10px 12px;
+    border-radius : 12px;
+    background : rgba(230, 57, 70, .12);
+    border : 1px solid rgba(230, 57, 70, .35);
+    animation : Aparecer .25s ease both;
+
+} .Mensaje-Confirmar span {
+
+    font-size : 13px;
+    font-weight : 600;
+
+} .Mensaje-Confirmar div {
+
+    display : flex;
+    gap : 8px;
+
+}
+
+/* ----- vacio / cargando ----- */
+.Historial .Historial-Vacio {
+
+    display : flex !important;
+    color : rgba(255, 255, 255, .7) !important;
+    flex-direction : column;
+    align-items : center;
+    gap : 8px;
+    padding : 50px 20px;
+    border-radius : 18px;
+    background : rgba(15, 12, 35, .5);
+    border : 1px dashed rgba(255, 255, 255, .2);
+    backdrop-filter : blur(14px);
+    -webkit-backdrop-filter : blur(14px);
+    font-size : 15px;
+
+} .Historial-Vacio span {
+
+    font-size : 36px;
+
+}
+
+/* ----- aviso flotante ----- */
+.Historial-Aviso {
+
+    position : fixed;
+    bottom : 24px;
+    right : 24px;
+    padding : 12px 20px;
+    border-radius : 12px;
+    font-size : 14px;
+    font-weight : 600;
+    color : white;
+    box-shadow : 0 10px 30px rgba(0, 0, 0, .4);
+    z-index : 999;
+    animation : Aparecer .3s ease both;
+
+} .Historial-Aviso.Ok {
+
+    background : #059669;
+
+} .Historial-Aviso.Error {
+
+    background : #e63946;
+
+}
+
+@keyframes Aparecer {
+
+    from {
+        opacity : 0;
+        transform : translateY(10px);
+    }
+
+    to {
+        opacity : 1;
+        transform : translateY(0);
+    }
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width : 768px) {
+
+    .Historial {
+        padding : 24px 16px 24px calc(var(--Barra) + 16px);
+    }
+
+    .Historial .Historial-Header h2 {
+        font-size : 26px;
+    }
+
+    .Historial-Stats {
+        width : 100%;
+    }
+
+    .Stat {
+        flex : 1;
+        min-width : 0;
+    }
+
+    .Historial-Grid {
+        grid-template-columns : 1fr;
+    }
+
+}
+
+@media (max-width : 480px) {
+
+    .Historial {
+        padding : 20px 12px 20px calc(var(--Barra) + 12px);
+    }
+
+    .Historial .Historial-Header h2 {
+        font-size : 22px;
+    }
+
+    .Historial-Stats {
+        gap : 6px;
+    }
+
+    .Stat {
+        padding : 10px 6px;
+    }
+
+    .Stat-Texto {
+        font-size : 9px;
+    }
+
+    .Historial-Filtros {
+        display : flex;
+    }
+
+    .Historial-Filtros button {
+        flex : 1;
+        padding : 8px 6px;
+    }
+
+    .Mensaje-Card {
+        padding : 16px;
+    }
+
+    .Mensaje-Top {
+        flex-wrap : wrap;
+    }
+
+    .Mensaje-Acciones {
+        flex-direction : column;
+    }
+
+}

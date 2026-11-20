@@ -5,11 +5,12 @@ import { Routes, Route } from 'react-router-dom'
 import '../Src/Css/Global/Html.css'
 
 import Gastronomia from './Japon/Gastronomia'
-import Estaciones from './Japon/Estaciones'
-import Contacto from './Japon/Contacto'
-import Galeria from './Japon/Galeria'
-import Inicio from './Japon/Inicio'
-import Vuelo from './Japon/Vuelo'
+import Estaciones  from  './Japon/Estaciones'
+import Contact     from     './Japon/Contact'
+import Galeria     from     './Japon/Galeria'
+import Inicio      from      './Japon/Inicio'
+import Perfil      from      './Japon/Perfil'
+import Vuelo       from       './Japon/Vuelo'
 
 function App() {
     return (
@@ -18,6 +19,12 @@ function App() {
             <Navbar />
 
             <Routes>
+                <Route 
+                
+                    path = '/Perfil'
+                    element = { <Perfil /> }
+                
+                />
                 <Route 
                 
                     path = '/'
@@ -51,7 +58,7 @@ function App() {
                 <Route 
                 
                     path = '/Contacto'
-                    element = { <Contacto /> }
+                    element = { <Contact /> }
                 
                 />
             </Routes>

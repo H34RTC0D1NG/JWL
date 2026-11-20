@@ -1,10 +1,9 @@
 // Importamos Los Iconos De React Icons Ya Que Los Links De Fontawesome o Ioicons No Funcionan En React
 
+import { FaPaperPlane, FaUserSecret } from 'react-icons/fa6'
 import { RiContactsBook2Fill } from 'react-icons/ri'
-import { MdTipsAndUpdates } from 'react-icons/md'
 import { BsCaretRightFill } from 'react-icons/bs'
 import { PiBowlFoodFill } from 'react-icons/pi'
-import { FaPaperPlane } from 'react-icons/fa6'
 import { AiFillPicture } from 'react-icons/ai'
 import { IoLogOut } from 'react-icons/io5'
 import { IoMdHome } from 'react-icons/io'
@@ -78,6 +77,12 @@ function Navbar() {
                     <div className = 'Menu'>
                         <ul className = 'Menu-Links'>
                             <li className = 'Nav-Link'>
+                                <Link to = '/Perfil' className = 'Link-A'>
+                                    <FaUserSecret className = 'Icon' />
+                                    <span className = 'Text Nav-Text'>Perfil</span>
+                                </Link>
+                            </li>
+                            <li className = 'Nav-Link'>
                                 <Link to = '/' className = 'Link-A'>
                                     <IoMdHome className = 'Icon' />
                                     <span className = 'Text Nav-Text'>Inicio</span>
@@ -99,12 +104,6 @@ function Navbar() {
                                 <Link to = '/Gastronomia' className = 'Link-A'>
                                     <PiBowlFoodFill className = 'Icon' />
                                     <span className = 'Text Nav-Text'>Gastronomia</span>
-                                </Link>
-                            </li>
-                            <li className = 'Nav-Link'>
-                                <Link to = '/Datos' className = 'Link-A'>
-                                    <MdTipsAndUpdates className = 'Icon' />
-                                    <span className = 'Text Nav-Text'>Antes De Viajar</span>
                                 </Link>
                             </li>
                             <li className = 'Nav-Link'>

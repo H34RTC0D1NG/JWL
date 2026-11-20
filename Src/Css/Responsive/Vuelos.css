@@ -1,0 +1,158 @@
+@Media ( max-width : 1100px ) {
+
+    .Item-Stack {
+
+        scale : 1.25;
+
+    } .Zona-Stack {
+
+        height : 300px;
+
+    }
+
+} @Media ( max-width : 768px ) {
+
+    .Panel-Titulo {
+
+        font-size : 30px;
+
+    } .Panel-Titulo span {
+
+        font-size : 22px;
+
+    } .Item-Stack {
+
+        width : min(420px, 86vw);
+        scale : 1;
+
+    } .Zona-Stack {
+
+        height : 240px;
+
+    } .Pasaje {
+
+        --Talon : 105px;
+
+    } .Pasaje .Pasaje-Principal {
+
+        padding : 12px 14px;
+
+    } .Pasaje .Pasaje-Ruta .Codigo {
+
+        font-size : 24px;
+            
+    } .Pasaje .Pasaje-Talon .Kanji {
+
+        font-size : 22px;
+
+    }
+
+} @Media ( max-width : 480px ) {
+
+    .Panel-Stack {
+
+        gap : 16px;
+
+    } .Panel-Titulo {
+
+        font-size : 24px;
+
+    } .Panel-Titulo span {
+
+        font-size : 18px;
+
+    } .Item-Stack {
+
+        width : 86vw;
+        height : 160px;
+            
+    } .Zona-Stack {
+
+        height : 210px;
+
+    } .Panel-Stack .Navegador {
+
+        font-size : 12px;
+
+    } .Pasaje {
+
+        --Talon : 88px;
+
+    } .Pasaje .Pasaje-Principal {
+
+        padding : 10px 14px;
+
+    } .Pasaje .Pasaje-Header .Tipo {
+
+        display : none;
+
+    } .Pasaje .Pasaje-Ruta {
+
+        gap : 6px;
+
+    } .Pasaje .Pasaje-Ruta .Codigo {
+
+        font-size : 20px;
+
+    } .Pasaje .Pasaje-Ruta .Ciudad {
+
+        font-size : 10px;
+
+    } .Pasaje .Pasaje-Datos div:nth-child(1) {
+
+        display : none;
+
+    } .Pasaje .Pasaje-Datos {
+
+        grid-template-columns : repeat(4, minmax(0, max-content));
+        gap : 4px;
+
+    } .Pasaje .Pasaje-Datos .Etiqueta-V {
+
+        font-size : 8px;
+        letter-spacing : .5px;
+
+    } .Pasaje .Pasaje-Datos .Valor {
+
+        font-size : 12px;
+
+    } .Pasaje .Pasaje-Talon {
+
+        padding : 10px 6px;
+
+    } .Pasaje .Pasaje-Talon .Kanji {
+
+        font-size : 18px;
+
+    } .Pasaje .Pasaje-Talon .Precio {
+
+        font-size : 11px;
+
+    } .Pasaje .Codigo-Barras {
+
+        height : 16px;
+
+    } .Pasaje .Btn-Pasaje {
+
+        font-size : 11px;
+        padding : 3px 8px;
+
+    }
+
+} @Media ( max-width : 360px ) {
+
+    .Pasaje {
+
+        --Talon : 78px;
+
+    } .Pasaje .Pasaje-Ruta .Codigo {
+
+        font-size : 18px;
+
+    } .Pasaje .Pasaje-Datos .Valor {
+
+        font-size : 11px;
+
+    }
+ 
+}

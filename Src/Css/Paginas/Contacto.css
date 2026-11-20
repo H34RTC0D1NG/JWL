@@ -1,0 +1,251 @@
+:Root {
+
+    --Color-Blanco  : white;
+    --Color-Negro   : black;
+    --Color-Rojo    : red;
+    --Color-Random  : #9ca3af;
+    --Transparent   : transparent;
+
+    --Gradiente-Uno : #dc2626;
+    --Gradiente-Dos : #f97316;
+
+    --Shadow-C : rgba(248, 113, 113, .35);
+    --Shadow-B : rgba(220,  30,  28, .35);
+    --Shadow-A : rgba(  0,   0,   0, .35);
+
+    --Lightness-A : rgba(255, 255, 255, .45);
+    --Lightness-B : rgba(249, 115,  22, .45);
+
+    --Vidrio-Fondo      : rgba(255, 255, 255, .08);
+    --Vidrio-Focus      : rgba(255, 255, 255, .14);
+    --Vidrio-Etiqueta   : rgba(255, 255, 255, .12);
+    --Vidrio-Brillo     : rgba(255, 255, 255,  .2);
+    --Vidrio-Borde      : rgba(255, 255, 255, .25);
+    --Vidrio-Borde-E    : rgba(255, 255, 255,  .3);
+    --Vidrio-Borde-B    : rgba(255, 255, 255, .35);
+    --Placeholder-Color : rgba(255, 255, 255,  .5);
+
+} #Contacto {
+
+    position : relative;
+    height : 100vh;
+    box-sizing : border-box;
+    display : flex;
+    justify-content : center;
+    color : var(--Color-Blanco);
+
+} #Contacto .Contenido-Grid {
+
+    max-width : 1150px;
+    margin : 0 auto;
+    width : 100%;
+    display : grid;
+    grid-template-columns : 1fr 1fr;
+    gap : 4rem;
+    align-items : center;
+
+} #Contacto .Contenido {
+
+    display : flex;
+    flex-direction : column;
+    gap : 1.4rem;
+    align-items : center;
+
+} #Contacto .Titulo-C {
+
+    margin : 0;
+    font-size : 40px;
+    font-weight : 400;
+    line-height : 1.1;
+    display : inline-flex !important;
+    align-items : center;
+    gap : .6rem;
+
+} #Contacto .Texto-C {
+
+    margin : 0;
+    font-size : 1.3rem;
+    line-height : 1.6;
+    text-align : center;
+    color : var(--Color-Blanco);
+
+} .Tarjeta-Contacto {
+
+    display : grid;
+    grid-template-columns : repeat(4, 1fr);
+    gap : .8rem;
+
+} .Tarjeta-Contacto .Tarjeta-Contacto {
+
+    display : flex;
+    position : relative;
+    flex-direction : column;
+    align-items : center;
+    justify-content : flex-start;
+    background : var(--Color-Negro);
+    gap : .4rem;
+    min-height : 100px;
+    padding : 1.2rem .5rem 1rem;
+    border : 2px solid var(--Color-Blanco);
+    text-align : center;
+    border-radius : 2.4px;
+    transition : transform .3s, border-color .3s, box-shadow .3s;
+
+} #Contacto .Tarjeta-Contacto .Tarjeta-Contacto:hover {
+
+    transform : translateY(-6px);
+    border : 3.2px solid var(--Color-Rojo);
+    box-shadow : 0 12px 28px var(--Shadow-C);
+
+} #Contacto .Tarjeta-Icono {
+
+    display : inline-flex;
+    font-size : 1.5rem;
+    color : var(--Color-Rojo);
+    transition : transform .3s;
+
+} #Contacto .Tarjeta-Contacto .Tarjeta-Contacto:hover .Tarjeta-Icono {
+
+    transform : scale(1.2) rotate(-8deg);
+
+} #Contacto .Tarjeta-Contacto strong {
+
+    font-size : .95rem;
+
+} #Contacto .Tarjeta-Contacto small {
+
+    font-size : .72rem;
+    line-height : 1.3;
+    color : var(--Color-Random);
+
+} #Contacto .Contacto-Marco {
+
+    position : relative;
+    padding : 3rem 3.5rem;
+    border : 1px solid var(--Vidrio-Borde);
+    border-radius : 2px;
+    background : var(--Vidrio-Fondo);
+    backdrop-filter : blur(16px);
+    -webkit-backdrop-filter : blur(16px);
+    box-shadow : 0 25px 60px var(--Shadow-A), inset 0 1px 0 var(--Vidrio-Fondo);
+    animation : Up .8s ease-out .2s both;
+
+} #Contacto .Contacto-Etiqueta {
+
+    position : absolute;
+    right : 2rem;
+    bottom : -1.2rem;
+    padding : .6rem 1rem;
+    border : 1px solid var(--Vidrio-Borde-E);
+    border-radius : 3px;
+    background : var(--Vidrio-Etiqueta);
+    backdrop-filter : blur(10px);
+    -webkit-backdrop-filter : blur(10px);
+    font-size : .8rem;
+    white-space : nowrap;
+
+} #Contacto .Contacto-Marco form label {
+
+    margin-top : 16px;
+    display : block;
+    margin-bottom : 12px;
+    font-size : .9rem;
+    font-weight : bold;
+    letter-spacing : .15em;
+    text-transform : uppercase;
+    color : var(--Color-Blanco);
+
+} #Contacto .Contacto-Marco form input, #Contacto .Contacto-Marco form textarea {
+
+    width : 100%;
+    box-sizing : border-box;
+    padding : .85rem 1rem;
+    border : 1px solid var(--Vidrio-Borde);
+    border-radius : 3px;
+    background : var(--Vidrio-Fondo);
+    color : var(--Color-Blanco);
+    font-size : 1rem;
+    font-family : inherit;
+    outline : none;
+    transition : border-color .3s, box-shadow .3s, background .3s;
+
+} #Contacto .Contacto-Marco form input:focus, #Contacto .Contacto-Marco form textarea:focus {
+
+    border-color : var(--Gradiente-Dos);
+    background : var(--Vidrio-Focus);
+    box-shadow : 0 0 0 3px var(--Lightness-B);
+
+} #Contacto .Contacto-Marco form input::placeholder {
+
+    color : var(--Placeholder-Color);
+
+} #Contacto .Contacto-Marco form button, #Contacto .Contacto-Marco form .btn.btn-primary {
+
+
+    position : relative;
+    overflow : hidden;
+    width : 100%;
+    margin-top : 12px;
+    padding : .95rem;
+    border : 1px solid var(--Vidrio-Borde-B);
+    border-radius : 3px;
+    background : linear-gradient(
+        90deg, var(--Gradiente-Uno), var(--Gradiente-Dos)
+    );
+    color : var(--Color-Blanco);
+    font-size : 1rem;
+    font-weight : 600;
+    letter-spacing : .3rem;
+    cursor : pointer;
+    box-shadow : 0 10px 25px var(--Shadow-B);
+    transition : transform .2s, box-shadow .3s, filter .3s;
+
+} #Contacto .Contacto-Marco form button:hover {
+
+    transform : translateY(-2px);
+    filter : brightness(1.1);
+
+} #Contacto .Contacto-Marco form button::after {
+
+    content : '';
+    position : absolute;
+    top : 0;
+    left : -75%;
+    width : 50%;
+    height : 100%;
+    background : linear-gradient(
+        120deg, var(--Transparent), var(--Lightness-A), var(--Transparent)  
+    );
+    transform : skewY(-20deg);
+
+} #Contacto .Contacto-Marco form button:hover::after {
+
+    animation : Flash .8s ease;
+
+} #Contacto .Contacto-Marco form button:active {
+
+    transform : translateY(0) scale(.98);
+
+} @keyframes Up {
+
+    from {
+
+        opacity : 0;
+        transform : translateY(30px);
+
+    } to {
+
+        opacity : 1;
+        transform : translateY(0);
+
+    }
+
+} @keyframes Flash {
+
+    to {
+
+        left : 125%;
+
+    }
+
+}

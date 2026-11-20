@@ -1,5 +1,6 @@
 import Desplazate from '../Componentes/Atomos/Desplazate'
 import Separador from '../Componentes/Atomos/Separador'
+import Stack from '../Componentes/Moleculas/Stack'
 import Live from '../Componentes/Atomos/Live'
 import { FaBurst } from 'react-icons/fa6'
 
@@ -33,10 +34,8 @@ function Vuelo() {
             <Separador />
 
             <section id = 'Cards-V'>
-                <Live Enlace = '../../Src/Assets/Lives/Sakura_Live.mp4' />
-                <div className = 'Vuelos-M'>
-
-                </div>
+                <Live Enlace = '../../Src/Assets/Lives/Rain_Live.mp4' />
+                <Stack />
             </section>
 
         </>

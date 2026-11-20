@@ -6,7 +6,7 @@ function Explorar() {
     return (
 
         <button className = 'Btn Rojo'>
-            <Link to = '/Vuelos'>
+            <Link to = '/Vuelo'>
                 Empezar a Explorar
             </Link>
         </button>

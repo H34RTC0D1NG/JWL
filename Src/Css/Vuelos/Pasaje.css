@@ -1,0 +1,227 @@
+.Pasaje {
+
+    --Talon : 120px;
+    display : flex;
+    width : 100%;
+    height : 100%;
+    border-radius : 14px;
+    overflow : hidden;
+    position : relative;
+    font-family : 'Segoe UI', Arial, sans-serif;
+
+    -webkit-mask :  
+        radial-gradient(circle at calc(100% - var(--Talon)) 0, transparent 11px, #000 11.5px) top / 100% 51% no-repeat,
+        radial-gradient(circle at calc(100% - var(--Talon)) 100%, transparent 11px, #000 11.5px) bottom / 100% 51% no-repeat
+    ;
+
+    mask : 
+        radial-gradient(circle at calc(100% - var(--Talon)) 0, transparent 11px, #000 11.5px) top / 100% 51% no-repeat,
+        radial-gradient(circle at calc(100% - var(--Talon)) 100%, transparent 11px, #000 11.5px) bottom / 100% 51% no-repeat
+    ;
+
+} .Pasaje, .Pasaje * {
+
+    font-family : 'Segoe UI', Arial, Sans-Serif !important;
+    box-sizing : border-box;
+    writing-mode : horizontal-tb;
+
+} .Pasaje p {
+
+    margin : 0;
+    padding : 0;
+    text-align : inherit;
+    position : static;
+    float : none;
+
+} .Pasaje.Pasaje-Claro {
+
+    background : white;
+    color : #1f1d2e;
+
+} .Pasaje.Pasaje-Vidrio {
+
+    background : rgba(20, 20, 50, .35);
+    backdrop-filter : blur(25px);
+    -webkit-backdrop-filter : blur(25px);
+    color : white;
+
+} .Pasaje .Pasaje-Principal {
+
+    flex : 1;
+    min-width : 0;
+    padding : 14px 18px;
+    display : flex;
+    flex-direction : column;
+    justify-content : space-between;
+    border-top : 6px solid var(--Color);
+    overflow : hidden;
+
+} .Pasaje .Pasaje-Header {
+
+    display : flex;
+    white-space : nowrap;
+    justify-content : space-between;
+    font-size : 10px;
+    letter-spacing : 2px;
+    font-weight : 700;
+    text-transform : uppercase;
+
+} .Pasaje .Pasaje-Header .Aereolinea {
+
+    color : var(--Color);
+
+} .Pasaje .Pasaje-Header .Tipo {
+
+    opacity : .5;
+
+} .Pasaje .Pasaje-Ruta {
+
+    display : flex;
+    align-items : center;
+    gap : 10px;
+
+} .Pasaje .Pasaje-Ruta .Codigo {
+
+    font-size : 28px;
+    font-weight : 800;
+    line-height : 1;
+    letter-spacing : 0;
+
+} .Pasaje .Pasaje-Ruta .Ciudad {
+
+    font-size : 11px;
+    opacity : .6;
+
+} .Pasaje .Pasaje-Ruta .Ciudad {
+
+    font-size : 11px;
+    opacity : .6;
+
+} .Pasaje .Pasaje-Ruta .Derecha {
+
+    text-align : right;
+
+} .Pasaje .Pasaje-Ruta .Linea {
+
+    flex : 1;
+    border-top : 2px dashed currentColor;
+    opacity : .4;
+    position : relative;
+
+} .Pasaje .Pasaje-Ruta .Linea span {
+
+    position : absolute;
+    left : 50%;
+    top : -11px;
+    transform : translateX(-50%);
+    font-size : 16px;
+    color : var(--Color);
+
+} .Pasaje .Pasaje-Datos {
+
+    display : grid;
+    grid-template-columns : repeat(5, minmax(0, max-content));
+    justify-content : space-between;
+    gap : 6px;
+
+} .Pasaje .Pasaje-Datos .Etiqueta-V {
+
+    margin : 1%;
+    color : #000;
+    font-size : 9px;
+    text-transform : uppercase;
+    letter-spacing : 1px;
+    opacity : .5;
+    border : none;
+    background : none;
+
+} .Pasaje .Pasaje-Datos .Valor {
+
+    font-size : 13px;
+    font-weight : 600;
+    letter-spacing : 0;
+    white-space : nowrap;
+    overflow : hidden;
+    text-overflow : ellipsis;
+
+} .Pasaje .Pasaje-Talon {
+
+    width : var(--Talon);
+    flex-shrink : 0;
+    border-left : 2px dashed rgba(127, 127, 127, .4);
+    border-top : 6px solid var(--Color);
+    padding : 12px 10px;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    justify-content : space-between;
+    text-align : center;
+
+} .Pasaje .Pasaje-Talon .Kanji {
+
+    font-size : 26px;
+    font-weight : 700;
+    color : var(--Color);
+    line-height : 1;
+    letter-spacing : 0;
+    white-space : nowrap;
+    writing-mode : horizontal-tb;
+    opacity : 1;
+
+} .Pasaje .Pasaje-Talon .Clase {
+
+    font-size : 9px;
+    letter-spacing : 1px;
+    text-transform : uppercase;
+    opacity : .6;
+
+} .Pasaje .Pasaje-Talon .Precio {
+
+    font-size : 13px;
+    font-weight : 700;
+    letter-spacing : 0;
+
+} .Pasaje .Codigo-Barras {
+
+    width : 85%;
+    height : 22px;
+    background : repeating-linear-gradient(90deg,
+        currentColor 0 2px, transparent 2px 4px,
+        currentColor 4px 5px, transparent 5px 8px,
+        currentColor 8px 11px, transparent 11px 12px
+    );
+    opacity : .8;
+
+} .Pasaje .Btn-Pasaje {
+
+    border : none;
+    background : rgba(127, 127, 127, .15);
+    color : var(--Color);
+    border-radius : 4px;
+    padding : 4px 12px;
+    font-size : 13px;
+    font-weight : 600;
+    white-space : nowrap;
+    cursor : pointer;
+    transition : .2s;
+
+} .Pasaje .Btn-Pasaje:hover {
+
+    transform : scale(1.05);
+
+} .Pasaje.Pasaje-Vidrio .Btn-Pasaje {
+
+    background : #fff;
+    color : #1f1d2e;
+
+} .Pasaje .Btn-Pasaje.Activo, .Pasaje-Vidrio .Btn-Pasaje.Activo {
+
+    background : var(--Color);
+    color : white;
+
+} .Pasaje *::before, .Pasaje *::after {
+
+    content : none !important;
+    display : none !important;
+
+} 
