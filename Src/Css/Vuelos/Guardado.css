@@ -1,0 +1,122 @@
+.Mis-Vuelos {
+
+    margin-left : 10px;
+    margin-top : 20px;
+    color : #1a1a1a;
+    filter : drop-shadow(0 10px 20px rgba(0, 0, 0, -45));
+    transition : transform .25s;
+
+} .Mis-Vuelos h2, .Mis-Vuelos p {
+
+    margin : 0;
+
+} .Mis-Vuelos-Header {
+
+    display : flex;
+    justify-content : space-between;
+    align-items : flex-end;
+    gap : 20px;
+    flex-wrap : wrap;
+    margin-bottom : 20px;
+
+} .Mis-Vuelos .Mis-Vuelos-Kanji {
+
+    display : block;
+    color : #e63046;
+    font-size : 14px;
+    letter-spacing : 6px;
+    margin-bottom : 4px;
+
+} .Mis-Vuelos .Mis-Vuelos-Header h2 {
+
+    display : block !important;
+    color : white !important;
+    font-size : 34px;
+    font-weight : 800;
+    text-shadow : 0 2px 12px rgba(0, 0, 0, .7);
+
+} .Mis-Vuelos .Mis-Vuelos-Sub {
+
+    color : rgba(255, 255, 255, .7);
+    font-size : 14px;
+    margin-top : 4px;
+
+} .Mis-Vuelos-Total {
+
+    min-width : 110px;
+    padding : 12px 18px;
+    border-radius : 14px ;
+    background : rgba(15, 12, 35, .6);
+    border : 1px solid rgba(255, 255, 255, .1);
+    backdrop-filter : blur(14px);
+    -webkit-backdrop-filter : blur(14px);
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+
+} .Mis-Vuelos-Total span {
+
+    font-size : 26px;
+    font-weight : 800;
+    line-height : 1;
+    color : #38bdf8;
+
+} .Mis-Vuelos-Total p {
+
+    font-size : 11px;
+    letter-spacing : 1px;
+    text-transform : uppercase;
+    color : rgba(255, 255, 255, .6);
+    margin-top : 4px;
+
+} .Mis-Vuelos-Grid {
+
+    display : grid;
+    grid-template-columns : repeat(auto-fill, minmax(400px, 1fr));
+    gap : 22px;
+
+} .Mis-Vuelos-Item {
+
+    height : 180px;
+    filter : drop-shadow(0 10px 20px rgba(0, 0, 0, .45));
+    transition : transform .25s;
+
+} .Mis-Vuelos-Item:hover {
+
+    transform : translateY(-4px);
+
+} .Mis-Vuelos .Mis-Vuelos-Vacio {
+
+    display : flex;
+    justify-content : center;
+    padding : 40px 20px;
+    border-radius : 4px;
+    background : rgba(15, 12, 35, .5);
+    border : 1px solid rgba(255, 255, 255, .2);
+    backdrop-filter : blur(14px);
+    -webkit-backdrop-filter : blur(14px);
+    color : rgba(255, 255, 255, .7);
+    font-size : 15px;
+    text-align : center;
+
+} @Media ( max-width : 768px ) {
+
+    .Mis-Vuelos .Mis-Vuelos-Header h2 {
+
+        font-size : 26px;
+
+    } .Mis-Vuelos-Grid {
+
+        grid-template-columns : 1fr;
+
+    }
+
+} @Media ( max-width : 480px ) {
+
+    .Mis-Vuelos-Item {
+
+        height : 160px;
+
+    }
+
+}

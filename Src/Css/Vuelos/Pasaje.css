@@ -45,6 +45,21 @@
     -webkit-backdrop-filter : blur(25px);
     color : white;
 
+} .Pasaje.Pasaje-Vidrio {
+
+    background : rgba(20, 20, 50, .35);
+    backdrop-filter : blur(25px);
+    -webkit-backdrop-filter : blur(25px);
+    color : white;
+
+} .Pasaje.Pasaje-Claro p {
+
+    color : #1f1d2e;
+
+} .Pasaje.Pasaje-Vidrio p {
+
+    color : white;
+
 } .Pasaje .Pasaje-Principal {
 
     flex : 1;

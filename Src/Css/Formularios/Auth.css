@@ -1,0 +1,226 @@
+.Auth {
+
+    --Barra : 93px;
+
+    position : relative;
+    z-index : 1;
+    min-height : 100vh;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    padding : 40px 24px 40px calc(var(--Barra) + 24px);
+    box-sizing : border-box;
+    font-family : 'Segoe UI', Arial, Sans-Serif;
+    color : white;
+
+} .Auth * {
+
+    font-family : inherit;
+    box-sizing : border-box;
+
+} .Auth h2, .Auth p {
+
+    margin : 0;
+
+} .Auth-Card {
+
+    position : relative;
+    width : min(420px, 100%);
+    display : flex;
+    flex-direction : column;
+    gap : 16px;
+    padding : 36px 32px 28px;
+    border-radius : 4px;
+    background : rgba(15, 12, 35, .7);
+    border : 1px solid rgba(255, 255, 255, .12);
+    backdrop-filter : blur(18px);
+    -webkit-backdrop-filter : blur(18px);
+    box-shadow : 0 20px 60px rgba(0, 0, 0, .5);
+    overflow : hidden;
+    animation : Auth-Aparecer .45s ease both;
+
+} .Auth-Card::before {
+
+    content : '';
+    position : absolute;
+    top : 0;
+    left : 0;
+    right : 0;
+    height : 4px;
+    background : linear-gradient(90deg, #e63946, #f472b6); 
+
+} .Auth .Auth-Kanji {
+
+    display : block !important;
+    color : #e63946;
+    font-size : 14px;
+    letter-spacing : 6px;
+    text-align : center;
+
+} .Auth .Auth-Card h2 {
+
+    display : block !important;
+    color : white !important;
+    font-size : 30px;
+    font-weight : 800;
+    text-align : center;
+    margin-top : -8px;
+
+} .Auth .Auth-Sub {
+
+    color : rgba(255, 255, 255, .6) !important;
+    font-size : 14px;
+    text-align : center;
+    margin-top : -10px;
+    margin-bottom : 6px;    
+
+} .Auth-Campo {
+
+    display : flex;
+    flex-direction : column;
+    gap : 6px;
+
+} .Auth-Campo > span {
+
+    font-size : 12px;
+    font-weight : 700;
+    letter-spacing : 1px;
+    text-transform : uppercase;
+    color : rgba(255, 255, 255, .65);
+
+} .Auth-Campo input {
+
+    width : 100%;
+    padding : 12px 14px;
+    border-radius : 4px;
+    border : 1px solid rgba(255, 255, 255, .15);
+    background : rgba(0, 0, 0, .3);
+    color : white;
+    font-size : 15px;
+    outline : none;
+    transition : border-color .2s, box-shadow .2s;
+
+} .Auth-Campo input::placeholder {
+
+    color : rgba(255, 255, 255, .35);
+
+} .Auth-Campo input::focus {
+
+    border-color : #e63946;
+    box-shadow : 0 0 0 3px rgba(230, 57, 70, .2);
+
+} .Auth-Clave {
+
+    position : relative;
+
+} .Auth-Clave input {
+
+    padding : right;
+
+} .Auth-Clave button {
+
+    position : absolute;
+    right : 6px;
+    top : 50%;
+    transform : translateY(-50%);
+    border : none;
+    background : transparent;
+    font-size : 18px;
+    cursor : pointer;
+    padding : 6px;
+    
+} .Auth .Auth-Error, .Auth .Auth-Exito {
+
+    padding : 10px 14px;
+    border-radius : 3px;
+    font-size : 13px;
+    font-weight : 600;
+    animation : Auth-Aparecer .25 ease both;
+
+} .Auth .Auth-Error {
+
+    background : rgba(230, 57, 70, .15);
+    border : 1px solid rgba(230, 57, 70, .4);
+    color : #ff8a93;
+
+} .Auth .Auth-Exito {
+
+    background : rgba(52, 211, 153, .15);
+    border : 1px solid rgba(52, 211, 153, .4);
+    color : #34d399;
+
+} .Auth-Boton {
+
+    margin-top : 6px;
+    padding : 13px;
+    border : none;
+    border-radius : 4px;
+    background : #e63946;
+    color : white;
+    font-size : 15px;
+    font-weight : 700;
+    cursor : pointer;
+    box-shadow : 0 8px 20px rgba(230, 57, 70, .35);
+    transition : .2s;
+
+} .Auth-Boton:hover {
+
+    filter : brightness(1.1);
+    transform : translateY(-1px);
+
+} .Auth-Boton:disabled {
+
+    opacity : .6;
+    cursor : wait;
+    transform : none; 
+
+} .Auth .Auth-Link {
+
+    text-align : center;
+    font-size : 14px;
+    color : rgba(255, 255, 255, .6);
+    padding-top : 14px;
+    border-top : 1px solid rgba(255, 255, 255, .08);
+
+} .Auth-Link a {
+
+    color : #ff6b76;
+    font-weight : 700;
+    text-decoration : none;
+    margin-left : 4px;
+
+} .Auth-Link a:hover {
+
+    text-decoration : underline;
+
+} @keyframes Auth-Aparecer {
+
+    from {
+
+        opacity : 0;
+        transform : translateY(12px);
+
+    } to {
+
+        opacity : 1;
+        transform : translateY(0);
+
+    }
+
+} @Media ( max-width : 480px ) {
+
+    .Auth {
+
+        padding : 20px 12px 20px calc(var(--Barra) + 12px);
+
+    } .Auth-Card {
+
+        padding : 28px 20px 22px;
+
+    } .Auth .Auth-Card h2 {
+
+        font-size : 24px;
+
+    }
+
+}

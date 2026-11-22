@@ -8,6 +8,7 @@ import Gastronomia from './Japon/Gastronomia'
 import Estaciones  from  './Japon/Estaciones'
 import Contact     from     './Japon/Contact'
 import Galeria     from     './Japon/Galeria'
+import Account     from     './Japon/Account'
 import Inicio      from      './Japon/Inicio'
 import Perfil      from      './Japon/Perfil'
 import Vuelo       from       './Japon/Vuelo'
@@ -59,6 +60,12 @@ function App() {
                 
                     path = '/Contacto'
                     element = { <Contact /> }
+                
+                />
+                <Route 
+                
+                    path = '/Account'
+                    element = { <Account /> }
                 
                 />
             </Routes>

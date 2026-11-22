@@ -20,7 +20,7 @@ interface Pasaje {
     Guardado?   : boolean;
     TextoBtn?   : string;
     onGuardar?  : (
-        _ID : number
+        Datos : Pasaje
     ) => void;
 
 }
@@ -34,7 +34,7 @@ function Pasaje(props : Pasaje) {
         e.stopPropagation()
 
         if (props.onGuardar) {
-            props.onGuardar(props._ID)
+            props.onGuardar(props)
         }
 
     }

@@ -48,7 +48,7 @@ export function ObtenerToken() : string {
 
 export function EsAdmin() : boolean {
     const S = ObtenerSesion()
-    return S !== null && S.Usuario.Rol === 'ADMIN'
+    return S !== null && S.Usuario.Rol === 'Admin'
 }
 
 export function CerrarSesion() {

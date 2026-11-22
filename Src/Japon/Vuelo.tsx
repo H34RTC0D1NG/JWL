@@ -1,6 +1,6 @@
 import Desplazate from '../Componentes/Atomos/Desplazate'
 import Separador from '../Componentes/Atomos/Separador'
-import Stack from '../Componentes/Moleculas/Stack'
+import Stack from '../Componentes/Organismos/Extenciones/Stack'
 import Live from '../Componentes/Atomos/Live'
 import { FaBurst } from 'react-icons/fa6'
 

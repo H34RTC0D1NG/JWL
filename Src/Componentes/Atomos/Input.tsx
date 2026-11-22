@@ -6,10 +6,11 @@ type Input = {
     Change : (
         Valor : string
     ) => void;
+    Base   : string;
 
 }
 
-function Input({ Tipo, Nombre, Valor, Change } : Input) {
+function Input({ Tipo, Nombre, Valor, Change, Base } : Input) {
     return (
 
         <input 
@@ -21,6 +22,8 @@ function Input({ Tipo, Nombre, Valor, Change } : Input) {
             value = {Valor}
 
             onChange = {(e) => Change(e.target.value)}
+
+            placeholder = {Base}
         
         />
 

@@ -82,6 +82,7 @@ function Contacto() {
                 Nombre   = 'Nombre'
                 Valor    = {Nombre}
                 Change   = {setNombre}
+                Base     = 'Nombre'
             
             />
 
@@ -92,6 +93,7 @@ function Contacto() {
                 Nombre   = 'Correo'
                 Valor    = {Correo}
                 Change   = {setCorreo}
+                Base     = 'Correo'
             
             />
 
@@ -102,6 +104,7 @@ function Contacto() {
                 Nombre   = 'Mensaje'
                 Valor    = {Mensaje}
                 Change   = {setMensaje}
+                Base     = 'Mensaje'
             
             />
 

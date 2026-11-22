@@ -1,0 +1,237 @@
+.Perfil {
+
+    --Barra : 93px;
+
+    width : 100% !important;
+    max-width : none !important;
+    min-height : 100vh;
+    margin : 0 !important;
+    padding : 32px 32px 40px calc(var(--Barra) + 32px) !important;
+    box-sizing : border-box;
+
+} .Perfil * {
+
+    font-family : inherit;
+    box-sizing : border-box;
+
+} .Perfil h2, .Perfil p {
+
+    margin : 0;
+    color : white;
+
+} .Perfil-Card {
+
+    border-radius : 4px;
+    overflow : hidden;
+    background : rgba(15, 12, 35, .7);
+    border : 1px solid rgba(255, 255, 255, .12);
+    backdrop-filter : blur(18px);
+    -webkit-backdrop-filter : blur(18px);
+    box-shadow : 0 20px 60px rgba(0, 0, 0, .45);
+    animation : Perfil-Aparecer .45s ease both;
+
+} .Perfil-Portada {
+
+    height : 110px;
+    position : relative;
+    background : radial-gradient(
+        circle at 80% 40%, rgba(230, 57, 70, .9) 0 45px, transparent 46px
+    ) linear-gradient(
+        135deg, #1b1340, #3a1a4a 60%, #6b1d3a
+    );
+
+} .Perfil .Perfil-Kanji {
+
+    position : absolute;
+    left : 28px;
+    top : 16px;
+    color : rgba(255, 255, 255, .7);
+    font-size : 13px;
+    letter-spacing : 6px;
+
+} .Perfil-Cuerpo {
+
+    position : relative;
+    z-index : 1;
+    display : flex;
+    align-items : flex-end;
+    gap : 20px;
+    padding : 14px 28px 22px;
+    flex-wrap : wrap;
+
+} .Perfil-Avatar {
+
+    position : relative;
+    margin-top : -62px;
+    width : 96px;
+    height : 96px;
+    flex-shrink : 0;
+    border-radius : 4px;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    font-size : 34px;
+    font-weight : 800;
+    color : white;
+    background : linear-gradient(
+        135deg, #38bdf8, #8b5cf6
+    );
+    border : 4px solid #15102b;
+    box-shadow : 0 5px 24px rgba(0, 0, 0, .4);
+
+} .Perfil-Avatar.Admin {
+
+    background : linear-gradient(
+        135deg, #e63946, #f59e0b
+    );
+
+} .Perfil-Info {
+
+    flex : 1;
+    min-width : 200px;
+    padding-bottom : 4px;
+
+} .Perfil .Perfil-Info h2 {
+
+    display : block !important;
+    color : white !important;
+    font-size : 28px;
+    font-weight : 800;
+
+} .Perfil .Perfil-Correo {
+
+    color : rgba(255, 255, 255, .6) !important;
+    font-size : 14px;
+    margin : 2px 0 8px;
+
+} .Perfil-Rol {
+
+    display : inline-block;
+    padding : 4px 12px;
+    border-radius : 4px;
+    font-size : 12px;
+    font-weight : 700;
+    background : rgba(56, 185, 248, .15);
+    color : #38bdf8;
+
+} .Perfil-Rol.Admin {
+
+    background : rgba(245, 158, 11, .15);
+    color : #f59e0b;
+
+} .Perfil-Salir {
+
+    padding : 10px 18px;
+    border-radius : 4px;
+    border : 1px solid rgba(230, 57, 70, .4);
+    background : rgba(230, 57, 70, .12);
+    color : #ff6b76;
+    font-size : 13px;
+    font-weight : 700;
+    cursor : pointer;
+    transition : .2s;
+
+} .Perfil-Salir:hover {
+
+    background : #e63946;
+    color : white;
+
+} .Perfil-Datos {
+
+    display : grid;
+    grid-template-columns : repeat(3, 1fr);
+    border-top : 1px solid rgba(255, 255, 255, .08);
+
+} .Perfil-Datos div {
+
+    padding : 16px 28px;
+
+} .Perfil-Datos div + div {
+
+    border-left : 1px solid rgba(255, 255, 255, .08);
+
+} .Perfil-Datos span {
+
+    display : block;
+    font-size : 11px;
+    font-weight : 700;
+    letter-spacing : 1px;
+    text-transform : uppercase;
+    color : rgba(255, 255, 255, .5);
+    margin-bottom : 4px;
+
+} .Perfil-Datos p {
+
+    font-size : 15px;
+    font-weight : 600;
+
+} .Perfil .Historial {
+
+    padding : 0;
+    margin-top : 36px;
+    min-height : auto;
+    max-width : none;
+
+} @keyframes Perfil-Aparecer {
+
+    from {
+
+        opacity : 0;
+        transform : translateY(12px);
+
+    } to {
+
+        opacity : 1;
+        transform : translateY(0);
+
+    }
+
+} @Media ( max-width : 768px ) {
+
+    .Perfil {
+
+        padding : 24px 16px 24px calc(var(--Barra) + 16px);
+      
+    } .Perfil-Datos {
+
+        grid-template-columns : 1fr;
+            
+    } .Perfil-Datos div + div {
+
+        border-left : none;
+        border-top : 1px solid rgba(255, 255, 255, .08);
+
+    }
+
+} @Media ( max-width : 480px ) {
+
+    .Perfil {
+
+        padding : 20px 12px 20px calc(var(--Barra) + 12px);
+
+    } .Perfil-Cuerpo {
+
+        padding : 12px 18px 18px;
+
+    } .Perfil-Avatar {
+
+        margin-top : -50px;
+        width : 76px;
+        height : 76px;
+        font-size : 26px;
+
+    } .Perfil .Perfil-Info h2 {
+
+        font-size : 22px;
+
+    } .Perfil-Salir {
+
+        width : 100%;
+
+    } .Perfil-Datos div {
+
+        padding : 12px 18px;
+
+    }
+
+}
