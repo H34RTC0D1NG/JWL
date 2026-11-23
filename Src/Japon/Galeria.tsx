@@ -7,7 +7,7 @@ function Galeria() {
     return (
 
         <section id = 'Galeria'>
-            <Live Enlace = '../../Src/Assets/Lives/Snow_Live.mp4' />
+            <Live Enlace = '../../Src/Assets/Lives/Arch_Live.mp4' />
             <div className = 'Wrap'>
                 <div className = 'Encabezado'>
 
